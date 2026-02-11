@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main() {
+    float m1, m2, m3, m4, m5, obt, percent;
+    printf("Enter marks for subject 1: ");
+    scanf("%f",&m1);
+    printf("Enter marks for subject 2: ");
+    scanf("%f",&m2);
+    printf("Enter marks for subject 3: ");
+    scanf("%f",&m3);
+    printf("Enter marks for subject 4: ");
+    scanf("%f",&m4);
+    printf("Enter marks for subject 5: ");
+    scanf("%f",&m5);
+    obt=m1+m2+m3+m4+m5;
+    percent=(obt/500)*100;
+    if (percent>=85)
+        printf("Pecentage: %.2f%\nGrade: A",percent);
+    else if (percent<85 && percent>=70)
+        printf("Pecentage: %.2f%\nGrade: B",percent);
+    else if (percent<70 && percent>=50)
+        printf("Pecentage: %.2f%\nGrade: C",percent);
+    else
+        printf("Pecentage: %.2f%\nGrade: Fail",percent);
+    return 0;  }
