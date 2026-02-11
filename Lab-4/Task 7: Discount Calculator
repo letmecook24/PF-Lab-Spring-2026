@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() {
+    float bill,discount,amount;
+    printf("Enter total bill amount: ");
+    scanf("%f",&bill);
+    if (bill>= 5000)
+        discount=0.20*bill;
+    else if(bill>=3000)
+        discount=0.10*bill;
+    else
+        discount=0;
+    amount=tb-discount;
+    printf("Discount:%.2f\n",discount);
+    printf("Amount to Pay:%.2f\n",amount);
+    return 0;  }
