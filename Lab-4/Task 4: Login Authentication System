@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+int password;
+char username[20];
+printf("Enter a username: ");
+scanf("%s",&username);
+printf("Enter a password: ");
+scanf("%d",&password);
+    if(username[0]=='a' &&
+        username[1]=='d' &&
+        username[2]=='m' &&
+        username[3]=='i' &&
+        username[4]=='n' &&
+username[5]=='\0' && password==1234)
+    {
+printf("Login Successful");
+}
+    else
+    {
+    printf("Invalid credentials");
+}
+return 0;   
+}
