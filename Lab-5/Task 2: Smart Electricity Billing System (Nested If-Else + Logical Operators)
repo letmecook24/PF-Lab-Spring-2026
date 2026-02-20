@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<string.h>
+int main() {
+    int units,bill;
+    char type[20];
+    printf("Enter total units consumed: ");
+    scanf("%d",&units);
+    if(units<=100)
+    {	bill=10*units;
+ 	printf("Your total bill is: %d",bill);	}
+    else
+    {	if(units>100 && units<=300)
+        {	 printf("Customer Type(Domestic or Commercial): ");
+scanf("%s",&type);
+            if(strcmp(type,"domestic")==0)
+            {	bill=units*12;
+                printf("Your total bill is: %d",bill);	}
+            else{
+            if(strcmp(type,"commercial")==0)
+            {	bill=units*15;
+                printf("Your total bill is: %d",bill);	}
+            else
+            {
+                printf("invalid option");	}	}
+        }
+        else
+        {
+            bill=units*20;
+            printf("Your total bill is: %d",bill);	}	}
+    return 0;
+}
