@@ -1,0 +1,62 @@
+#include<stdio.h>
+int main()
+{
+    int category,type,bill,quantity;
+    printf("Select category \n");
+    printf("1-Fast Food\n");
+    printf("2-Desi Food\n");
+    scanf("%d",&category);
+
+    		switch(category)
+    			{	case 1:
+        				printf("Fast Food:\n");
+        				printf("1-Burger\n");
+        				printf("2-Pizza\n");
+        				scanf("%d",&type);
+
+        				printf("Enter quantity : ");
+        				scanf("%d",&quantity);
+
+        			switch(type)
+        			{		case 1:
+            					bill=500*quantity;
+            					printf("Your total bill is %d Rs",bill);
+            					break;
+           
+            					case 2:
+            					bill=1200*quantity;
+            					printf("Your total bill is %d Rs",bill);
+            					break;
+           
+            					default:
+            					printf("Invalid choice");
+            					break;				 }
+        				break;
+       
+       	 			case 2:
+         				printf("Desi Food:\n");
+        				printf("1-Biryani\n");
+        				printf("2-Karahi\n");
+        				scanf("%d",&type);
+        				printf("Enter total quantity: ");
+       				scanf("%d",&quantity);
+        			switch(type)
+        			{		case 1:
+            					bill=320*quantity;
+             					printf("Your total bill is %d Rs",bill);
+            					break;
+           
+            					case 2:
+            					bill=1500*quantity;
+             					printf("Your total bill is %d Rs",bill);
+             					break;
+             					default:
+             					printf("invalid choice");
+             					break;				}
+        				break;
+         
+         				default:
+             				printf("invalid choice");
+             				break;					}
+    return 0;
+}
