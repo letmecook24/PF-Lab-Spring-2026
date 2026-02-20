@@ -28,22 +28,38 @@ Each lab focuses on practical applications of C programming concepts including d
   - Discount Calculator  
   - Scientific Calculator  
 
+### Lab 5
+- Advanced decision-making and nested constructs  
+- Nested `if-else` statements and logical operators  
+- Nested `switch-case` programs  
+- Ternary operators for conditional computations  
+- Mathematical and scientific computations using `<math.h>`  
+- Tasks include:
+  - University Scholarship Evaluation  
+  - Smart Electricity Billing System  
+  - Smart Parking Management System  
+  - Online Food Ordering System  
+  - Employee Bonus Calculation  
+  - Triangle Type Identifier  
+  - Login Authentication System  
+  - Advanced Scientific Calculator  
+
 ---
 
 ## 🔹 Concepts Covered
-- Decision making: `if`, `if-else`, `if-else if-else`  
-- Switch case: `switch` statement  
-- Logical and relational operators  
+- Decision making: `if`, `if-else`, `if-else if-else`, nested conditions  
+- Switch case: `switch` statement, nested switch-case  
+- Logical and relational operators (`&&`, `||`, `<`, `>`, `==`)  
+- Ternary operators for compact conditional expressions  
 - Input validation and error handling  
-- Arithmetic and scientific calculations  
-- Menu-driven programming  
+- Arithmetic and scientific calculations (`sqrt()`, `pow()`, `log10()`, `sin()`, `cos()`, `tan()`, `fabs()`)  
+- Menu-driven and interactive programming  
 
 ---
 
 ## 🔹 Instructions
-1. Each lab is in its respective folder (`Lab-1`, `Lab-2`, `Lab-3`, `Lab-4`).  
+1. Each lab is in its respective folder (`Lab-1`, `Lab-2`, `Lab-3`, `Lab-4`, `Lab-5`).  
 2. Compile and run `.c` files using a C compiler.  
-
 
 ---
 
