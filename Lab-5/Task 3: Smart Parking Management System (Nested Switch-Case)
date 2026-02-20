@@ -1,0 +1,61 @@
+#include<stdio.h>
+int main()	{
+    int vehicle,type,hours,fee;
+    printf("Select Vehicle Type\n");
+    printf("1-Car\n");
+    printf("2-Bike\n");
+    printf("3-Bus\n");
+    scanf("%d",&vehicle);
+    switch(vehicle)
+    { 	case 1:
+        	printf("Enter type of Parking:\n");
+       	 printf("1-Regular Parking\n");
+        	printf("2-VIP Parking\n");
+        	scanf("%d",&type);
+        	printf("Enter parking hours: ");
+        	scanf("%d",&hours);
+        		switch(type)
+        			{	case 1:
+            				fee=50*hours;
+            				printf("Your total parking fees is %d Rs",fee);
+            				break;
+            				case 2:
+            				fee=100*hours;
+          				printf("Your total parking fees is %d Rs",fee);
+            				break;
+            				default:
+            				printf("Invalid choice");
+            				break;				}
+        		break;
+        case 2:
+        printf("Enter type of Parking:\n");
+        printf("1-Regular Parking\n");
+        printf("2-Premium Parking\n");
+        scanf("%d",type);
+        printf("Enter parking hours: ");
+        scanf("%d",&hours);
+        		switch(type)
+        			{	case 1:
+            				fee=20*hours;
+             				printf("Your total parking fees is %d Rs",fee);
+            				break;
+            				case 2:
+            				fee=40*hours;
+             				printf("Your total parking fees is %d Rs",fee);
+             				break;
+             				default:
+             				printf("invalid choice");
+             				break;				}
+
+        		break;
+       
+        case 3:
+        			fee=200*hours;
+        			printf("Your total parking fees is %d Rs",fee);
+             			break;
+         
+        			default:
+             			printf("invalid choice");
+             			break;				}
+    return 0;
+}
