@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main() {
+  int choice;
+  do
+  {	printf("\nLibrary Menu\n");
+    	printf("1. Issue Book\n2. Return Book\n3. Exit\n");
+    	printf("Select option: ");
+    	scanf("%d",&choice);
+    if(choice==1)
+    	{	printf("Book issued successfully.\n");	}
+    else if(choice==2)
+    	{	printf("Book Returned successfully.\n");	}
+    else if(choice==3)
+   	 {	printf("Thank you for visiting Library.\n");	}
+    else
+    	{	printf("Invalid option.\n");		}	}
+  while(choice!=3);
+    return 0;	}
