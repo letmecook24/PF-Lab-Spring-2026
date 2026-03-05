@@ -1,0 +1,9 @@
+#include <stdio.h>
+int main() {
+  int i,n,distance=0;
+    printf("Enter days for total distance calculation: ");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {	distance=distance+i;		}
+printf("Total distance covered: %d km",distance);
+    return 0;	}
