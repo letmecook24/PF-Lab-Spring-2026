@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main() {
+  int i=0,total=0,units;
+  float average;
+  printf("Enter units consumed: ");
+  scanf("%d",&units);
+  while(units!=-999)
+   {     	
+total=total+units; 
+        	i++;
+        	printf("Enter units consumed: ");
+        	scanf("%d",&units);		
+}
+   if(i!=0)
+   {	
+average=(float)total/i; 
+    	printf("Average consumption is: %.2f ",average);	
+    }
+   else 
+   {	printf("No data was entered");	}
+    return 0;	}
