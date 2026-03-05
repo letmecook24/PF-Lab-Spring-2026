@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main() {
+    int price,additem;
+    float totalbill=0;
+    do{
+        printf("Enter price of item: ");
+        scanf("%d",&price);
+        totalbill=totalbill+price;
+        printf("Do you want to add anything else(1-Yes,0-No) : ");
+        scanf("%d",&additem);
+    }
+    while(additem!=0);
+      if(totalbill>3000)
+         {  
+totalbill=totalbill-(totalbill*0.1);    
+          }
+      printf("Final Payable Amount is: %.2f Rs ",totalbill);
+    return 0;   
+}
