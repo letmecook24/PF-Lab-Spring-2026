@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main() {
+    int totaldata=1000, usage;
+    while(totaldata>0)
+    {
+        printf("Enter Data usage (in MB): ");
+        scanf("%d",&usage);
+        totaldata=totaldata-usage;
+        printf("Remaining Data is: %d\n",totaldata);
+    }
+    return 0;	}
