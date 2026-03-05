@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main() {
+    int rating,excellent=0,satisfactory=0,improvement=0;
+    printf("Enter Employee performance rating (-1 to stop): ");
+    scanf("%d",&rating);
+    while(rating!=-1)
+    {	if(rating>=85)
+        	{	excellent++;	 	}
+       	 else if(rating>=60)
+        	{	satisfactory++;	}
+       	 else if(rating>=0)
+        	{	improvement++;	}
+        	else
+        	printf("Invalid rating ");
+    printf("Enter Employee performance rating (-1 to stop): ");
+    scanf("%d",&rating);		}
+    printf("Total Employees in Excellent category : %d\n", excellent);
+    printf("Total Employees in Satisfactory category : %d\n", satisfactory);
+    printf("Total Employees in Need Improvement category: %d\n", improvement);
+    return 0;   }
