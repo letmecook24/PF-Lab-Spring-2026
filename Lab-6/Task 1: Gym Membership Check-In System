@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main() {
+    int checkedIn=0,i,status;
+    for(i=1;i<=25;i++)
+    {	printf("Enter check-in status (1=Checked In,0=Absent): ");
+        	scanf("%d",&status);
+        	if(status==1)
+        	{	checkedIn++;		}
+    }
+    printf("\nTotal Members Checked in: %d",checkedIn);
+    return 0;	}
