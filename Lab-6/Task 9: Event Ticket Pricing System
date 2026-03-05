@@ -1,0 +1,9 @@
+#include <stdio.h>
+int main() {
+    int totalrevenue=0,n,i;
+    printf("Number of tickets: ");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {	totalrevenue=totalrevenue+(i*100);	}
+    printf("Total revenue: %d",totalrevenue);
+    return 0;   }
