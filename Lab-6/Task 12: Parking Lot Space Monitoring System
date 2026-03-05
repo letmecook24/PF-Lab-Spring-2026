@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main() {
+    int totalSpace=50,parked=0,choice=1;
+    printf("Parking Lot Monitoring System\n");
+    while(parked<totalSpace && choice!=0) {
+        printf("Car arrived. Park it? (1-Yes, 0-Stop): ");
+        scanf("%d",&choice);
+        if(choice== 1) {
+            parked++;
+            printf("Car parked successfully. Remaining spaces: %d\n",totalSpace-parked);
+        } 
+        else if(choice==0) {
+            printf("Parking stopped by operator.\n");
+        } 
+        else {
+            printf("Invalid input. Enter 1 or 0.\n");
+        }
+    }
+    if(parked == totalSpace) {
+        printf("Parking lot is full. No more spaces available.\n");
+    }
+    printf("Total cars parked: %d\n", parked);
+    return 0;
+}
