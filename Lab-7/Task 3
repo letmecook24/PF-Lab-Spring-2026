@@ -1,0 +1,40 @@
+#include <stdio.h>
+int main()
+{
+    int pass[10],fail[10],sumPass=0,sumFail=0;
+    int i,mark,p=0,f=0;
+    float avg1,avg2;
+    for(i=0;i<10;i++)
+    {
+     printf("Enter mark of student %d (-1 to stop): ",i+1);
+     scanf("%d",&mark);
+        if(mark==-1)
+            break;
+        if(mark>=5 && mark<=10)
+        {
+            pass[p]=mark;
+            sumPass+=mark;
+            p++;
+        }
+        else if(mark>=0&&mark< 5)
+        {
+            fail[f]=mark;
+            sumFail+=mark;
+            f++;
+        }
+    }
+    printf("Pass Students Marks: ");
+    for(i=0;i<p;i++)
+        printf("%d ",pass[i]);
+    avg1=(float)sumPass/p;
+    if(p>0)
+        { avg1=(float)sumPass/p;
+        printf("\nAverage Pass Marks =%.2f",avg1);}
+    printf("\nFail Students Marks: ");
+    for(i=0;i<f;i++)
+        printf("%d ",fail[i]);
+    if(f>0)
+        {avg2=(float)sumFail/f;
+        printf("\nAverage Fail Marks= %.2f",avg2);}
+    return 0;
+}
