@@ -25,17 +25,6 @@ This folder contains C programs that demonstrate the use of **2D arrays** and **
 
 ---
 
-## 📂 Programs Included
-
-- Classroom Marks System  
-- Cinema Seat Booking System  
-- Temperature Monitoring System  
-- Matrix Operations (Transpose, Determinant, Cofactor, Adjoint, Inverse)  
-- Matrix Type Checker  
-- Matrix Multiplication  
-
----
-
 ## 🧠 What I Learned
 
 - How to work with multi-dimensional arrays in C  
