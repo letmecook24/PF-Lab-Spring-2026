@@ -1,0 +1,42 @@
+#include <stdio.h>
+float applyDiscount(float price,int tier);
+void printInvoice(float original,float discounted);
+int main()
+{
+    float price,discounted;
+    int tier;
+    printf("Enter price: ");
+    scanf("%f",&price);
+    printf("Enter tier (Bronze=1,Silver=2,Gold=3,Platinum=4): ");
+    scanf("%d",&tier);
+    discounted = applyDiscount(price, tier);
+    printInvoice(price, discounted);
+    return 0;	}
+float applyDiscount(float price,int tier)
+{
+    float rate;
+    if(tier==1)
+        rate=0.05;
+    else if(tier==2)
+        rate=0.10;
+    else if(tier==3)
+        rate=0.20;
+    else if(tier==4)
+        rate=0.30;
+    else
+        rate=0;
+    return price-(price*rate);
+}
+void printInvoice(float original,float discounted)
+{
+    float discount,delivery=0,total;
+    discount=original-discounted;
+    if(discounted<2000)
+        delivery=150;
+    total=discounted+delivery;
+    printf("---Invoice---\n");
+    printf("Original price=%.2f\n",original);
+    printf("Discount=%.2f\n",discount);
+    printf("After discount=%.2f\n",discounted);
+    printf("Delivery=%.2f\n",delivery);
+    printf("Total=%.2f\n",total);	}
