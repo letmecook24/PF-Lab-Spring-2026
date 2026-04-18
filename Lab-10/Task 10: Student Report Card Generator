@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main() {
+    FILE *fptr;
+    char name[30],line[100];
+    int s1,s2,s3;
+    float avg;
+    
+    printf("Enter name and 3 subject scores: ");
+    scanf("%s %d %d %d",name,&s1,&s2,&s3);
+    avg=(s1+s2+s3)/3.0;
+    fptr=fopen("report.txt","w+");
+
+    if(fptr == NULL) {
+        printf("File cannot be opened\n");
+        return 0;
+    }
+    if(avg>=50)
+        fprintf(fptr,"Name: %s\nScore1: %d\nScore2: %d\nScore3: %d\nAverage: %.2f\nStatus: Pass\n",name,s1,s2,s3,avg);
+    else
+        fprintf(fptr,"Name: %s\nScore1: %d\nScore2: %d\nScore3: %d\nAverage: %.2f\nStatus: Fail\n",name,s1,s2,s3,avg);
+
+    rewind(fptr);
+    while (fgets(line,sizeof(line),fptr) != NULL) {
+        printf("%s",line);
+    }
+    fclose(fptr);
+    return 0;	}
