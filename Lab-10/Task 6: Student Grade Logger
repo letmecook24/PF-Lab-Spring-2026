@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main(){
+    FILE *fptr;
+    char name[30];
+    int grade,i;
+    fptr=fopen("grades.txt","w");
+    if(fptr==NULL) {
+        printf("File cannot be opened\n");
+        return 0;
+    }
+    for(i=0;i<3;i++) {
+        scanf("%s %d",name,&grade);
+        fprintf(fptr,"%s %d\n",name,grade);
+    }
+    fclose(fptr);
+    printf("\n");
+    fptr=fopen("grades.txt", "r");
+    if(fptr==NULL) {
+        printf("File cannot be opened\n");
+        return 0;
+    }
+    while(fscanf(fptr,"%s %d",name,&grade)!=EOF) {
+        printf("%s %d\n",name,grade);
+    }
+    fclose(fptr);
+    return 0;
+}
