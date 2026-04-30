@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(void) {
+    int *contacts;
+    int *temp;
+    int oldSize = 3;
+    int newSize = 5;
+    contacts = malloc(oldSize * sizeof(int));
+    if (contacts == NULL) {
+        printf("Memory allocation failed.\n");
+        return 1;
+    }
+    printf("Enter 3 contact IDs:\n");
+    for (int i = 0; i < oldSize; i++) {
+        printf("Contact %d: ", i + 1);
+        scanf("%d", &contacts[i]);
+    }
+    temp = realloc(contacts, newSize * sizeof(int));
+    if (temp == NULL) {
+        printf("Memory reallocation failed.\n");
+        free(contacts);
+        contacts = NULL;
+        return 1;
+    }
+    contacts = temp;
+    printf("\nEnter 2 more contact IDs:\n");
+    for (int i = oldSize; i < newSize; i++) {
+        printf("Contact %d: ", i + 1);
+        scanf("%d", &contacts[i]);
+    }
+    printf("\nUpdated Contact List:\n");
+    for (int i = 0; i < newSize; i++) {
+        printf("Contact %d ID: %d\n", i + 1, contacts[i]);
+    }
+    free(contacts);
+    contacts = NULL;
+    return 0;
+}
