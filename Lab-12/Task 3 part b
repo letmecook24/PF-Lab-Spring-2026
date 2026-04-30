@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(void) {
+    int N;
+    float *readings;
+    printf("Enter total number of readings: ");
+    scanf("%d", &N);
+    readings = (float *)calloc(N, sizeof(float));
+    if (readings == NULL) {
+        printf("Memory could not be allocated.\n");
+        return 1;
+    }
+    printf("\nInitial values after calloc:\n");
+    for (int i = 0; i < N; i++) {
+        printf("Value at position %d = %.1f\n", i, readings[i]);
+    }
+    printf("\nEnter temperature readings:\n");
+    for (int i = 0; i < N; i++) {
+        printf("Reading %d: ", i + 1);
+        scanf("%f", &readings[i]);
+    }
+    printf("\nTemperatures stored:\n");
+    for (int i = 0; i < N; i++) {
+        printf("%.2f\n", readings[i]);
+    }
+
+    free(readings);
+    readings = NULL;
+    return 0;
+}
